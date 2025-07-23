@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from news.models import Author, Category, Post, Comment
+from news.models import Category, Post, Comment, #Author
 
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
