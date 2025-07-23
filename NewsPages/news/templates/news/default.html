@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}News Portal{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">News Portal</a></h1>
+        <nav>
+            <a href="/news/">Новости</a> |
+            <a href="/articles/">Статьи</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2025 NewsPages</p>
+    </footer>
+</body>
+</html>

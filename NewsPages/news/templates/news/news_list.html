@@ -1,0 +1,20 @@
+{% extends "news/default.html" %}
+{% load custom_filters %}
+
+{% block title %}Список новостей{% endblock %}
+
+{% block content %}
+<h2>Новости</h2>
+<ul>
+  {% for post in posts %}
+    <li>
+      <strong>{{ post.title|censor }}</strong><br>
+      {{ post.created_at|date:"d.m.Y" }}<br>
+      {{ post.content|censor|slice:":50" }}...
+      <br>
+      <a href="{% url 'post_detail' post.pk %}">Читать далее</a>
+    </li>
+    <hr>
+  {% endfor %}
+</ul>
+{% endblock %}
